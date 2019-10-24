@@ -40,11 +40,11 @@ class App extends React.Component {
           <div>
               <div>
                   <form onSubmit={this.handleSubmit}>
-                      <lable>Hour:</lable>
+                      <label>Hour:</label>
                       <input type="number" onChange={(e) => { this.setState({ hour: Number(e.target.value) }) }} />
-                      <lable>Miniute:</lable>
+                      <label>Miniute:</label>
                       <input type="number" onChange={(e) => this.setState({ min: Number(e.target.value) })} />
-                      <lable>Second:</lable>
+                      <label>Second:</label>
                       <input type="number" onChange={(e) => this.setState({ sec: Number(e.target.value) })} />
                       <br />
                       <input type="submit" value="Submit" />
