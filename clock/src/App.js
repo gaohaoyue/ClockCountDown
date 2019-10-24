@@ -1,5 +1,6 @@
 /* Class Component - Main Container */
 import React, {Component} from 'react';
+import Display from './Display';
 class App extends React.Component {
   constructor(props) {
       super(props);
@@ -34,6 +35,7 @@ class App extends React.Component {
   }
 
   render() {
+    const {start} = this.state;
       return (
           <div>
               <div>
@@ -48,12 +50,12 @@ class App extends React.Component {
                       <input type="submit" value="Submit" />
                   </form>
               </div>
-
-              <div>
+              <div>{start && <Display timeLeft={this.state.timeLeft} format={this.format} />}</div>
+              {/* <div>
                   <label>{this.format(this.state.timeLeft)[0]}</label> <br />
                   <label>{this.format(this.state.timeLeft)[1]}</label> <br />
                   <label>{this.format(this.state.timeLeft)[2]}</label>
-              </div>
+              </div> */}
 
           </div>
       )
